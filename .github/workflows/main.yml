@@ -33,5 +33,5 @@ jobs:
           pip install -r function/requirements.txt --target ./function
       - name: Deploy
         run: |
-          zip -j deploy.zip function/*
+          zip -r deploy.zip function
           aws lambda update-function-code --function-name=mintapi --zip-file=fileb://deploy.zip
