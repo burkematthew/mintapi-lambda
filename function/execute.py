@@ -1,6 +1,6 @@
 import atexit
 import keyring
-import mintapi
+from mintapi import Mint
 
 EMAIL = "burkematthewjoseph@gmail.com"
 
@@ -9,7 +9,7 @@ def lambda_handler(event, context):
     password = keyring.get_password("mintapi", EMAIL)
     imap_password = keyring.get_password("mintapi_imap", EMAIL)
 
-    mint = mintapi.Mint(
+    mint = Mint(
         EMAIL,
         password,
         mfa_method="email",
