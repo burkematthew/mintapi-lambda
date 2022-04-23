@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run:
           python -m pip install --upgrade pip
-          pip install --target ./function -r function/requirements.txt
+          pip install -r function/requirements.txt --target ./function
       - name: Deploy
         run: |
           zip -j deploy.zip function/*
