@@ -34,6 +34,5 @@ jobs:
       - name: Deploy
         run: |
           cd function
-          rm -r numpy
           zip -r deploy.zip .
           aws lambda update-function-code --function-name=mintapi --zip-file=fileb://deploy.zip
