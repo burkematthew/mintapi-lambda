@@ -1,2 +1,6 @@
+import requests
+
+
 def lambda_handler(event, context):
-    return 2 + 2
+    requests.get("http://www.google.com")
+    return "cool cool"
