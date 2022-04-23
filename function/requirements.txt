@@ -1,2 +1,1 @@
-keyring==23.2.1
-mintapi
+requests
