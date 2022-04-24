@@ -16,6 +16,7 @@ def lambda_handler(event, context):
         imap_account=EMAIL,
         imap_password=imap_password,
         headless=True,
+        use_chromedriver_on_path=True,
     )
     atexit.register(mint.close)  # Ensure everything is torn down.
 
